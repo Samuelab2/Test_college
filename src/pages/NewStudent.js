@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Container } from 'reactstrap'
 import CreateForm from '../components/CreateForm'
 import { useHistory } from 'react-router-dom'
+import { studentsDB } from '../db'
 
 const NewStudent = props => {
   const [ form, setForm ] = useState({})
@@ -15,10 +16,9 @@ const NewStudent = props => {
 
   const onSubmit = e => {
     e.preventDefault()
-    console.log(form)
+    studentsDB.push(form.form)
     history.push({
       pathname: '/students',
-      state: { form }
     })
   }
 

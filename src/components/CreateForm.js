@@ -7,13 +7,13 @@ const CreateForm = ({handleChange, onSubmit}) => (
       <Col md={6}>
         <FormGroup>
           <Label for="firstName">First Name *</Label>
-          <Input type="text" name="first_name" id="firstName" onChange={handleChange}/>
+          <Input type="text" name="first_name" id="firstName" onChange={handleChange} required />
         </FormGroup>
       </Col>
       <Col md={6}>
         <FormGroup>
           <Label for="lastName">Last Name *</Label>
-          <Input type="text" name="last_name" id="lastName" onChange={handleChange}/>
+          <Input type="text" name="last_name" id="lastName" onChange={handleChange} required />
         </FormGroup>
       </Col>
     </Row>
@@ -21,13 +21,13 @@ const CreateForm = ({handleChange, onSubmit}) => (
       <Col md={6}>
         <FormGroup>
           <Label for="Email">Email *</Label>
-          <Input type="email" name="email" id="Email" onChange={handleChange}/>
+          <Input type="email" name="email" id="Email" onChange={handleChange} required />
         </FormGroup>
       </Col>
       <Col md={6}>
         <FormGroup>
           <Label for="phone">Phone *</Label>
-          <Input type="number" name="phone" id="phone" onChange={handleChange}/>
+          <Input type="number" name="phone" id="phone" onChange={handleChange} required />
         </FormGroup>
       </Col>
     </Row>
@@ -39,7 +39,7 @@ const CreateForm = ({handleChange, onSubmit}) => (
       </Col>
       <Col md={3}>
         <FormGroup>
-          <Input type="date" name="birth" id="birth" onChange={handleChange}/>
+          <Input type="date" name="birth" id="birth" onChange={handleChange} required />
         </FormGroup>
       </Col>
     </Row>
@@ -49,12 +49,12 @@ const CreateForm = ({handleChange, onSubmit}) => (
       </Col>
       <FormGroup check inline>
         <Label check>
-          <Input type="radio" name='gender' value='Male' onChange={handleChange}/> Male
+          <Input type="radio" name='gender' value='Male' onChange={handleChange} required /> Male
         </Label>
       </FormGroup>
       <FormGroup check inline>
         <Label check>
-          <Input type="radio" name='gender' value='Female' onChange={handleChange}/> Female
+          <Input type="radio" name='gender' value='Female' onChange={handleChange} required /> Female
         </Label>
       </FormGroup>
     </Row>
@@ -94,7 +94,7 @@ const CreateForm = ({handleChange, onSubmit}) => (
       </Col>
       <Col>
         <FormGroup>
-          <Input type="text" name="intended_major" id="intendedMajor" onChange={handleChange}/>
+          <Input type="text" name="intended_major" id="intendedMajor" onChange={handleChange} required />
         </FormGroup>
       </Col>
     </Row>
@@ -106,7 +106,7 @@ const CreateForm = ({handleChange, onSubmit}) => (
       </Col>
       <Col>
         <FormGroup>
-          <Input type="text" name="semester_enrollment" id="enrollment" onChange={handleChange}/>
+          <Input type="text" name="semester_enrollment" id="enrollment" onChange={handleChange} required />
         </FormGroup>
       </Col>
     </Row>
