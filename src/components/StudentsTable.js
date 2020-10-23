@@ -18,19 +18,23 @@ const StudentsTable = () => {
       </thead>
       <tbody>
         {
-          studentsDB.map((item, index) => {
-            return (
-              <tr key={index}>
-                <th scope="row">{index}</th>
-                <td>{item.first_name}, {item.last_name}</td>
-                <td>{item.email}</td>
-                <td>{item.phone}</td>
-                <td>{item.address}, {item.address2}, {item.city}, {item.zip}</td>
-                <td>{item.intended_major}</td>
-                <td>{item.semester_enrollment}</td>
-              </tr>
-            )
-          })
+          studentsDB.length === 0 
+          ? <tr>
+              <th>Nothing here...</th>
+            </tr>
+          : studentsDB.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <th scope="row">{index + 1 }</th>
+                  <td>{item.first_name}, {item.last_name}</td>
+                  <td>{item.email}</td>
+                  <td>{item.phone}</td>
+                  <td>{item.address}, {item.address2}, {item.city}, {item.zip}</td>
+                  <td>{item.intended_major}</td>
+                  <td>{item.semester_enrollment}</td>
+                </tr>
+              )
+            })
         }
       </tbody>
     </Table>

@@ -5,19 +5,25 @@ import StudentsTable from '../components/StudentsTable'
 
 const ListStudents = () => {
   return (
-  <Container>
-    <Row>
-      <Col md={6}>
-        <h1>List students</h1>
-      </Col>
-      <Col md={6}>
-        <Link to='/students/new' className='btn btn-primary'>
-          Add student
-        </Link>
-      </Col>
-    </Row>
-    <StudentsTable />
-  </Container>
+  <div className='min-vh-100 bg-light'>
+    <Container>
+      <Row>
+        <Col md={9}>
+          <h1>List students</h1>
+        </Col>
+        <Col md={3}>
+          <Link to='/students/new' className='btn btn-primary'>
+            Add student
+          </Link>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <StudentsTable />
+        </Col>
+      </Row>
+    </Container>
+  </div>
 )}
 
 export default ListStudents;

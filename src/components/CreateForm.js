@@ -110,7 +110,7 @@ const CreateForm = ({handleChange, onSubmit}) => (
         </FormGroup>
       </Col>
     </Row>
-    <Button>Submit</Button>
+    <Button color="primary">Submit</Button>
   </Form>
 )
 

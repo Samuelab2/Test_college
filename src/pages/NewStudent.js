@@ -23,9 +23,11 @@ const NewStudent = props => {
   }
 
   return (
-    <Container>
-      <h1>Student Registration</h1>
-      <CreateForm onSubmit={onSubmit} handleChange={handleChange} />
+    <Container fluid className='min-vh-100 bg-light'>
+      <Container>
+        <h1>Student Registration</h1>
+        <CreateForm onSubmit={onSubmit} handleChange={handleChange} />
+      </Container>
     </Container>
   )
 }
